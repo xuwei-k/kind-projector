@@ -3,7 +3,12 @@ organization := "org.spire-math"
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 homepage := Some(url("http://github.com/non/kind-projector"))
 
-scalaVersion := "2.11.7"
+resolvers ++= Seq(
+  "Scala 2.12.0-M5 Core" at "https://oss.sonatype.org/content/repositories/orgscala-lang-1322/",
+  "Scala 2.12.0-M5 Modules" at "https://oss.sonatype.org/content/repositories/orgscala-lang-1323/"
+)
+
+scalaVersion := "2.12.0-M5"
 crossScalaVersions := Seq("2.10.6", "2.11.7", "2.12.0-M4")
 
 libraryDependencies += "org.scala-lang" % "scala-compiler" % scalaVersion.value
